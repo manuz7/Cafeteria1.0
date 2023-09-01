@@ -4,7 +4,9 @@ import{useFonts,
        Montserrat_400Regular,
        Montserrat_700Bold,
        Montserrat_400Regular_Italic
-} from '@expo-google-fonts/montserrat';
+       
+} from '@expo-google-fonts/montserrat'  
+;
 
 export default function App() {
 
@@ -12,6 +14,7 @@ export default function App() {
     "MontserratRegular": Montserrat_400Regular,
     "MontserratBold": Montserrat_700Bold,
     "MontserratItalic": Montserrat_400Regular_Italic
+     
   })
 
   if (!fontCarregada) {
@@ -26,5 +29,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
-

@@ -1,19 +1,18 @@
 import React from 'react';
 import{ StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
-import topo from '../../../assets/Logo e topo/cafe.png';
-import logo from '../../../assets/Logo e topo/logo.png';
+import topo from '../../../assets/LT/cafe.png';
+import logo from '../../../assets/LT/logo.png';
 
 const width = Dimensions.get('screen').width;
 
 export default function Carrinho (){
     return <>
     <Image source={topo} style={estilos.topo} />
-    <Text style= {estilos.titulo}>Detalhe do Cardapio</Text>
+    <Text style= {estilos.titulo}>Detalhes do Cardapio</Text>
     <View style= {estilos.cardapio}>
-        <Text style= {estilos.titulocardapio}>Carrinho de Compras</Text>
+        <Text style= {estilos.titulocardapio}>Cardapio</Text>
         <View style=  {estilos.cafe}>
-        <Image style= {estilos.imagemCafe} source={logo}/>
         <Text style= {estilos.nomeCafe}>Cafeteria Belas Artes</Text>
         </View>
         <Text style={estilos.descricao} />
@@ -31,19 +30,18 @@ const estilos = StyleSheet.create({
       titulo: {
           fontSize: 24,
           fontWeight: "bold",
-          lineHeight: 26,
+          lineHeight: 17,
           width: "100%",
           textAlign: "center",
           color: "white",
           position: "absolute",
           padding: 16
-
+          
       },
          titulocardapio:  {
              fontSize : 26,
              lineHeight: 42,
-             color: "#464646",
-             fontFamily: "MontserratBold"
+             color: "#464646"
          },
 
          cardapio: {
@@ -68,7 +66,7 @@ const estilos = StyleSheet.create({
               paddingVertical: 12
           },
           descricao:{
-              color: "A3A3A3",
+              color: "#A3A3A3",
               fontStyle: "italic"
           },
 
