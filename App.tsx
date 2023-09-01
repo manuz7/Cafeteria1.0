@@ -3,10 +3,10 @@ import Carrinho from './src/pages/Cardapio';
 import{useFonts,
        Montserrat_400Regular,
        Montserrat_700Bold,
-       Montserrat_400Regular_Italic
-       
+       Montserrat_400Regular_Italic,
 } from '@expo-google-fonts/montserrat'  
 ;
+
 
 export default function App() {
 
@@ -29,3 +29,4 @@ export default function App() {
     </SafeAreaView>
   );
 }
+
