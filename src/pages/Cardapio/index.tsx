@@ -19,10 +19,13 @@ export default function Carrinho (){
 
         
         
-        <Text style={estilos.preco}>R$ 40,00</Text>
         <View style= {estilos.card}>
         <Image source={cafe} style={estilos.img} />
-        <Text style={estilos.text}>Capuccino Gourmet</Text>
+        <View  style= {estilos.cafezinho}>
+        <Text style={estilos.text}>Cappuccino Gourmet </Text>
+        <Text style={estilos.preco}>R$ 40,00</Text>
+        <Text style={estilos.sobre}> Dose de café espresso, leite vaporizado e um mínimo de 1 cm de espessura de espuma do leite </Text>
+        </View>
         </View>
        </View>
        </>
@@ -81,13 +84,6 @@ const estilos = StyleSheet.create({
               fontStyle: "italic"
           },
 
-          preco: {
-             fontSize: 15,
-             lineHeight: 38,
-             color: "#2A9F85",
-             marginTop: 1
-
-          },
 
           card: {
               width: "100%",
@@ -103,10 +99,35 @@ const estilos = StyleSheet.create({
             marginLeft: 10
           },
 
+          preco: {
+          marginTop:10,
+          color: "#2A9F85",
+        },
+
+        sobre: {
+            marginTop:20,
+            color: "#F4F9F6",
+           fontFamily:  "MontserratRegular"
+          },
             text: {
-                width: "40%",
-              height: 280,
-              marginTop: 10,
-            marginLeft: 10
-            }
+             color: "#FF9933",
+             fontStyle: "italic",
+             fontWeight: "bold",
+             fontSize: 20
+            },
+           
+            cafezinho: {
+                    width: "40%",
+                    height: 280,
+                    marginTop: 10,
+                    marginLeft: 10,
+                  
+                    
+                  
+            },
+
+
+            
+
+         
     })
