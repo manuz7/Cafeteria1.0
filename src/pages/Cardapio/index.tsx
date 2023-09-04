@@ -3,7 +3,7 @@ import{ StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
 import topo from '../../../assets/LT/cafe.png';
 import logo from '../../../assets/LT/logo.png';
-import bola from '../../../assets/Salgados/Bolinhas de Queijo.png';
+import cafe from '../../../assets/CG.png';
 
 const width = Dimensions.get('screen').width;
 
@@ -16,10 +16,13 @@ export default function Carrinho (){
         <View style=  {estilos.cafe}>
         <Text style= {estilos.nomeCafe}>Cafeteria Belas Artes</Text>
         </View>
+
+        
         
         <Text style={estilos.preco}>R$ 40,00</Text>
         <View style= {estilos.card}>
-        <Image source={bola} style={estilos.img} />
+        <Image source={cafe} style={estilos.img} />
+        <Text style={estilos.text}>Capuccino Gourmet</Text>
         </View>
        </View>
        </>
@@ -88,12 +91,22 @@ const estilos = StyleSheet.create({
 
           card: {
               width: "100%",
-              height: 100,
-              backgroundColor: "#000"
+              height: 300,
+              backgroundColor: "#000",
+              flexDirection: "row",
           },
 
           img: {
-            width: "80%",
-            height: 100
+            width: "40%",
+            height: 280,
+            marginTop: 10,
+            marginLeft: 10
           },
+
+            text: {
+                width: "40%",
+              height: 280,
+              marginTop: 10,
+            marginLeft: 10
+            }
     })
