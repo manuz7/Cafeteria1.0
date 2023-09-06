@@ -1,7 +1,7 @@
 import React from 'react';
 import{ StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 
-import topo from '../../../assets/LT/cafe.png';
+import topo from '../../../assets/LT/TopoNovo.png';
 import logo from '../../../assets/LT/logo.png';
 import cafe from '../../../assets/CG.png';
 
