@@ -1,88 +1,76 @@
 import React from "react"
-import { Image, Text, StyleSheet, Dimensions, View } from 'react-native';
-const width = Dimensions.get('screen').width;
+import { Text, View, Image, StyleSheet, TouchableOpacity } from "react-native"
+import logo from "../../../../assets/LT/logo.png";
+import TextStyle from "../../../components/Text"
 
-
-export default function Topo(){
-   return<>
-
-    <Text style = {estilos.titulocardapio}>Cardapio</Text>
-    <View style = {estilos.cafe}>
-    <Text style = {estilos.nomeCafe}>Cafeteria Belas Artes</Text>
-    </View>
-    <View style= {estilos.card}     >
-    <Image source={cafe} style= {estilos.img} />
-    
-    </View>
-
-
-    </>
+type Props = {
+  nome: string,
+  nomeLocal: string,
+  descricao: string,
+  preco: string,
+  botao: string,
 }
 
 
-const estilos = StyleSheet.create({
+export default function Detalhe({nome, nomeLocal,   descricao, preco, botao}: Props) {
+    return (
+    <>
+    <TextStyle style={style.nome}>{nome}</TextStyle>
+        <View style={style.local}>
+            <Image source={logo} style={style.imagemLocal}/>
+        <Text style={style.nomeLocal}>{nomeLocal}</Text>
+        </View>
+        <Text style={style.descricao}>{descricao}</Text>
+    <Text style={style.preco}>{preco}</Text>
+    <TouchableOpacity style={style.botao}>
+      <Text style={style.textobotao}>Comprar</Text>
+    </TouchableOpacity>
+    </>
+    )
+}
 
-titulocardapio:  {
-        fontSize : 26,
+const style = StyleSheet.create({
+    nome: {
+        fontSize: 26,
         lineHeight: 42,
-        color: "#464646"
+        color: '#464646',
+        fontFamily: 'MontSerratBold'
     },
-
-    cardapio: {
-        paddingVertical: 8,
-        paddingHorizontal: 16
-    },
-
-    nomeCafe: {
-      fontSize: 16,
-      lineHeight: 26,
-      marginLeft: 12,
-      fontWeight: "bold"
-     },
-     imagemCafe: {
-        width: 32,
-        height: 32
-    },
-
-    cafe:{
+    local: {
         flexDirection: "row",
         paddingVertical: 12
     },
-    descricao:{
+    imagemLocal: {
+        width: 32,
+        height: 32
+    },
+    nomeLocal: {
+        fontFamily: "MontSerratBold",
+        fontSize: 16,
+        lineHeight: 26,
+        marginLeft: 12,
+    },
+    descricao: {
         color: "#A3A3A3",
-        fontStyle: "italic"
+        fontFamily: "MontSerratItalic",
     },
-
-
-    card: {
-        width: "100%",
-        height: 300,
-        backgroundColor: "#000",
-        flexDirection: "row",
-    },
-
-    img: {
-      width: "40%",
-      height: 280,
-      marginTop: 10,
-      marginLeft: 10
-    },
-
     preco: {
-    marginTop:10,
-    color: "#2A9F85",
-  },
-
-  sobre: {
-      marginTop:20,
-      color: "#F4F9F6",
-     fontFamily:  "MontserratRegular"
+        fontSize: 26,
+        fontFamily: "MontSerratRegular",
+        color: "#2A9F85",
+        marginTop: 8
     },
-      text: {
-       color: "#FF9933",
-       fontStyle: "italic",
-       fontWeight: "bold",
-       fontSize: 20
-      }
-
+    botao: {
+      marginTop: 16,
+      backgroundColor: "#2a9f85",
+      color: "#2a9f85",
+      borderRadius: 6
+    },
+    textobotao: {
+      textAlign: "center",
+      color: "#ffffff",
+      fontSize: 16,
+      lineHeight: 26,
+      fontFamily: "MontSerratBold"
+    }
 })
